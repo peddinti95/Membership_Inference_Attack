@@ -39,7 +39,7 @@ def stl10(config, path,param):
     exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=config.learning.decrease_lr_factor, gamma=config.learning.decrease_lr_every)
     model_target, best_acc_target, data_test_set, label_test_set, class_test_set = train_model(model_target, criterion, optimizer, exp_lr_scheduler,dataloaders_target,dataset_sizes_target,
                        num_epochs=config.learning.epochs)
-    np.save(path + "/res_train_target_"+str(param)+".npy", best_acc_target)
+    np.savetxt(path + "/res_train_target_"+str(param)+".csv", best_acc_target)
     plot_title = 'STL10'
     drawLossAcc(best_acc_target, plot_title, path)
     print("START TRAINING SHADOW MODEL")
@@ -71,7 +71,7 @@ def stl10(config, path,param):
         data_train_set.append(data_train_set_unit)
         label_train_set.append(label_train_set_unit)
         class_train_set.append(class_train_set_unit)
-        np.save(path + "/res_train_shadow_"+str(num_model_sahdow)+"_"+str(param)+".npy", best_acc_sh)
+        np.savetxt(path + "/res_train_shadow_"+str(num_model_sahdow)+"_"+str(param)+".csv", best_acc_sh)
         all_shadow_models.append(model_shadow)
         all_dataloaders_shadow.append(dataloaders_shadow)
     print("START GETTING DATASET ATTACK MODEL")
