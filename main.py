@@ -26,7 +26,7 @@ shutil.copy(src_dir,dst_dir)
 
 if config.statistics.dataset == "KMNIST":
     if config.statistics.type == "training_size":
-        print("START STATS ON TRAINING SIZE WITH MNIST : ", config.statistics.training_size_value)
+        print("START STATS ON TRAINING SIZE WITH KMNIST : ", config.statistics.training_size_value)
         res_precision = np.zeros(len(config.statistics.training_size_value))
         res_recall = np.zeros(len(config.statistics.training_size_value))
         res_accuracy = np.zeros(len(config.statistics.training_size_value))
@@ -60,7 +60,7 @@ if config.statistics.dataset == "KMNIST":
             np.savetxt(path + "/res_accuracy_per_class.csv", res_accuracy_per_class)
             #np.savetxt(path + "/res_best_acc_shadows.csv", res_best_acc_shadows)
     if config.statistics.type == "number_shadow":
-        print("START STATS ON NUMBER SHADOW  WITH MNIST : ", config.statistics.number_shadow_value)
+        print("START STATS ON NUMBER SHADOW  WITH KMNIST : ", config.statistics.number_shadow_value)
         res_precision = np.zeros(len(config.statistics.number_shadow_value))
         res_recall = np.zeros(len(config.statistics.number_shadow_value))
         res_accuracy = np.zeros(len(config.statistics.number_shadow_value))
