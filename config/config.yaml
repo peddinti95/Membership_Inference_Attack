@@ -7,7 +7,7 @@ general:
   seed: 0
   train_target_size: 2500 #5 000, 10 000, 15 000 // 4 600, 10 520, 19 920, 29 540
   test_target_size: 1000
-  number_shadow_model: 25 #2 50 MNIST ou 100 cifar
+  number_shadow_model: 5 #2 50 MNIST ou 100 cifar
 
 learning:
   batch_size: 64
@@ -23,6 +23,6 @@ learning:
 statistics:
   dataset: MNIST #CIFAR100 // CIFAR10 // FashionMNIST // //KMNIST //STL10
   type:  overfitting # training_size # // number_shadow // overfitting
-  training_size_value: [4600, 10520, 19920, 29540] #[2500, 5000, 10000, 15000] #4 600, 10 520, 19 920, 29 540
+  training_size_value: [2500, 5000, 10000, 15000] #[2500, 5000, 10000, 15000] #4 600, 10 520, 19 920, 29 540
   number_shadow_value: [100] #[2, 10 ,20, 50, 100]
   epoch_value: [100] #[2, 10 ,20, 50, 100]
