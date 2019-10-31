@@ -59,14 +59,14 @@ def drawPlot(accuracy_per_class,precision_per_class,recall_per_class,plot_title,
     """my code starts to draw plot graph"""
     plt.figure()
     plt.subplot(3, 1, 1)
-    plt.bar(accuracy_per_class, color='#1a53ff', width=0.8, color = ['red', 'green'])
+    plt.plot(accuracy_per_class, color='#1a53ff', lw=2, marker='o')
     plt.title("Results on "+plot_title)
     plt.ylabel('Accuracy')
     plt.subplot(3, 1, 2)
-    plt.bar(recall_per_class, color='#1a53ff', width=0.8, color = ['red', 'green'])
+    plt.plot(recall_per_class, color='#1a53ff', lw=2, marker='o')
     plt.ylabel('Recall')
     plt.subplot(3, 1, 3)
-    plt.bar(precision_per_class, color='#1a53ff', width=0.8,color = ['red', 'green'])
+    plt.plot(precision_per_class, color='#1a53ff', lw=2, marker='o')
     plt.ylabel('Precision')
     plt.tight_layout()
     plot_path=path+"/fig_"+plot_title+".png"
