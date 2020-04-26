@@ -21,7 +21,7 @@ learning:
     n_estimators: 10000
 
 statistics:
-  dataset: KMNIST #CIFAR100 // CIFAR10 // FashionMNIST // //KMNIST //STL10
+  dataset: CIFAR10 #KMNIST #CIFAR100 //  // FashionMNIST // //KMNIST //STL10
   type:  overfitting # training_size # // number_shadow // overfitting
   training_size_value: [2500, 5000, 10000, 15000] #[2500, 5000, 10000, 15000] #4 600, 10 520, 19 920, 29 540
   number_shadow_value: [100] #[2, 10 ,20, 50, 100]
