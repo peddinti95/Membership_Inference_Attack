@@ -10,6 +10,8 @@ class Net_mnist(nn.Module):
         self.conv2 = nn.Conv2d(20, 50, 5, 1)
         self.fc1 = nn.Linear(4*4*50, 128)
         self.fc2 = nn.Linear(128, 10)
+        
+        self.dropout = nn.Dropout(p=0.2)
 
     def forward(self, x):
         x = torch.tanh(self.conv1(x))
@@ -29,6 +31,8 @@ class Net_kmnist(nn.Module):
         self.conv2 = nn.Conv2d(20, 50, 5, 1)
         self.fc1 = nn.Linear(4*4*50, 128)
         self.fc2 = nn.Linear(128, 10)
+        
+        self.dropout = nn.Dropout(p=0.2)
 
     def forward(self, x):
         x = torch.tanh(self.conv1(x))
@@ -47,6 +51,8 @@ class Net_fashionmnist(nn.Module):
         self.conv2 = nn.Conv2d(20, 50, 5, 1)
         self.fc1 = nn.Linear(4*4*50, 128)
         self.fc2 = nn.Linear(128, 10)
+        
+        self.dropout = nn.Dropout(p=0.2)
 
     def forward(self, x):
         x = torch.tanh(self.conv1(x))
@@ -66,6 +72,8 @@ class Net_cifar10(nn.Module):
         self.conv2 = nn.Conv2d(6, 16, 5)
         self.fc1 = nn.Linear(16 * 5 * 5, 128)
         self.fc2 = nn.Linear(128, 10)
+        
+        self.dropout = nn.Dropout(p=0.2)
 
     def forward(self, x):
         x = self.pool(torch.tanh(self.conv1(x)))
@@ -84,6 +92,8 @@ class Net_stl10(nn.Module):
         self.fc1= nn.Linear(49 * 96* 96, 128)
         #self.fc1 = nn.Linear(16 * 5 * 5, 128)
         self.fc2 = nn.Linear(128, 10)
+        
+        self.dropout = nn.Dropout(p=0.2)
 
     def forward(self, x):
         x = x.view(64,6,48*96)
@@ -104,6 +114,8 @@ class Net_cifar100(nn.Module):
         self.conv2 = nn.Conv2d(6, 16, 5)
         self.fc1 = nn.Linear(16 * 5 * 5, 128)
         self.fc2 = nn.Linear(128, 100)
+        
+        self.dropout = nn.Dropout(p=0.2)
 
     def forward(self, x):
         x = self.pool(torch.tanh(self.conv1(x)))
