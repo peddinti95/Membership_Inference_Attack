@@ -1,18 +1,12 @@
 # membership_inference_attack
+
+Machine learning models are the most popular techniques used in presently available top companies to spread their wings in the fields of Marketing and Advertising to reach
+out to their users with the best user experience. For machine learning as a service, platform providers as Google and Amazon are responsible for their service to the customers. Most of the companies use machine learning techniques on the user's data to understand their activities and interests. These services enable businesses to leverage high-end machine learning and artificial technology without the requirement of being expertise in the domain. 
+
+On the other hand, in this process machine learning is becoming responsible for the leakage of information on each data record they are trained on. This is a crucial aspect that needs attention as Machine learning is used as a service platform for most of the top-rated companies such as Google, Amazon, Oracle, and So on. A black box API available to the clients helps to construct a model based on the data sets uploads and operations can be performed on them using machine learning techniques.
+
+Idea:It is assumed that we get some access to the black-box setting, i.e.  we get to  query  it.   Using  some  dataset  distribution  or  samples  that  we  have,  we  querythe model and it creates some prediction vector stating its probability to be in someclass.  Now, we need to classify these distributions of the prediction so that we can infer that the dataset was in training or not.
+
 ## Implementation of the paper : "Membership Inference Attacks Against Machine Learning Models", Shokri et al.
 
-I implement the most basic attack which assumes the adversary has the data which comes from the same distribution as the target model’s the training dataset. I choose to evaluate on MNIST,
-CIFAR10 and CIFAR100. I used the framework pytorch for the target and the shadow models and ligth gradient boosting for the attack model.
 
-Tested on python 3.5 and torch 1.0
-
-## Congiguration
-
-in the file `config/config.yaml`, you will find the different settings you can change.
-
-## Running experiements
-
-By running main.py, you start the statistic proposed in `statistics.type` in the `config.yaml`. 
-`training_size` will test all the values in `training_size_value`
-`overfitting` will test all the values in `epoch_value`
-`number_shadow` will test all the values in `number_shadow_value`
