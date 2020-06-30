@@ -7,6 +7,6 @@ On the other hand, in this process machine learning is becoming responsible for 
 
 Idea:It is assumed that we get some access to the black-box setting, i.e.  we get to  query  it.   Using  some  dataset  distribution  or  samples  that  we  have,  we  querythe model and it creates some prediction vector stating its probability to be in someclass.  Now, we need to classify these distributions of the prediction so that we can infer that the dataset was in training or not.
 
-## Implementation of the paper : "Membership Inference Attacks Against Machine Learning Models", Shokri et al.
+## Implementation is based on the paper : "Membership Inference Attacks Against Machine Learning Models", Shokri et al.
 
 
