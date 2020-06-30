@@ -1,4 +1,4 @@
-# membership_inference_attack
+# Membership_Inference_Attack
 
 Machine learning models are the most popular techniques used in presently available top companies to spread their wings in the fields of Marketing and Advertising to reach
 out to their users with the best user experience. For machine learning as a service, platform providers as Google and Amazon are responsible for their service to the customers. Most of the companies use machine learning techniques on the user's data to understand their activities and interests. These services enable businesses to leverage high-end machine learning and artificial technology without the requirement of being expertise in the domain. 
